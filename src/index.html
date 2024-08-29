@@ -3,14 +3,46 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap"
       rel="stylesheet"
     />
-    <title>Питание для котов</title>
+    <title>CAT ENERGY</title>
   </head>
-  <body></body>
+  <body>
+    <div class="container ">
+      <header class="header center">
+        <a href="index.html">
+            <picture>
+                <source srcset="./img/logo.svg" media="(max-width: 750px)">
+                <img class="header__logo" src="./img/logo-desktop.png" alt="Логотип CAT ENERGY">
+            </picture>
+        </a>
+        <img class="header__logo header__logo--mobile" src="./img/logo-mobile.svg" alt="Логотип CAT ENERGY">
+        <div class="burger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav class="header__nav">
+          <a class="header__link" href="#">главная</a>
+          <a class="header__link" href="#">Каталог продукции</a>
+          <a class="header__link" href="#">подбор программы</a>
+        </nav>
+      </header>
+      <section class="top center">
+        <div class="top__wrapper">
+          <h1 class="title">Функциональное питание для котов</h1>
+          <p class="top__text">Занялся собой? Займись котом!</p>
+          <button type="button" class="top__btn">подобрать программу</button>
+        </div>
+        <img class="top__img" src="./img/top-img.png" alt="Питание для котов">
+      </section>
+    </div>
+
+    <main></main>
+  </body>
 </html>

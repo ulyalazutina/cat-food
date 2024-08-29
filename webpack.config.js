@@ -15,7 +15,7 @@ module.exports = ({develop}) => ({
     output: {
         path: path.resolve(__dirname, "dist"),
         filename: '[name].[contenthash:8].js',
-        clean: true,
+        clean: develop ? false : true,
     },
     plugins: [
         new HtmlWebpackPlugin({template: path.resolve(__dirname, 'src/index.html')}),
@@ -24,21 +24,25 @@ module.exports = ({develop}) => ({
     module: {
         rules: [
             {
-                test: '/\.html$/i',
+                test: /\.html$/i,
                 loader: 'html-loader',
             },
             {
-                test: '/\.(?:png, jpg, jpeg, svg)$/i',
+                test: /\.(?:png, jpg, jpeg, svg)$/i,
                 type: 'asset',
                 generator: {
                     filename: 'img/[hash][ext][query]'
                 },
             },
             {
-                test: '/\.sass$/i',
+                test: /\.sass$/i,
                 use: [
                     MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader',
                 ],
+            },
+            {
+                test: /\.(woff|woff2|eot|ttf|otf)$/i,
+                type: 'asset/resource',
             },
         ]
     },
