@@ -135,7 +135,7 @@ a
         @include font(24px, 400)
         margin-top: 39px
         margin-bottom: 27px
-        font-family: "Arial", sans-serif
+        font-family: $font-text
     &__link
         @include font(30px, 400, $base-color-text, 20px)
         text-transform: uppercase
@@ -150,4 +150,24 @@ a
             position: absolute
             top: 10px
             right: -40px
+
+.works
+    display: grid
+    gap: 72px
+    padding-top: 71px
+    &__items
+        display: grid
+        gap: 95px
+        grid-template-columns: repeat(auto-fit, minmax( 200px , 1fr ))
+    &__item
+        display: grid
+        gap: 31px
+    &__text
+        @include font(24px, 400, #444444, 16px)
+        font-family: $font-text
+
+
+.heading
+    @include font(60px, 400, $base-color-text, 60px)
+
 @import 'adaptive.sass'
