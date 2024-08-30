@@ -190,7 +190,7 @@ a
         padding-bottom: 76px
     &__bold-text    
         @include font(37px, 400, $base-color-text, 30px)
-    &__text
+    &__text-small
         @include font(14px, 400, #444444, 14px)
     &__inner-text
         display: flex
@@ -200,20 +200,25 @@ a
         text-transform: uppercase
     &__container
         position: relative
+        padding-left: 0
     &__img
         position: absolute
         bottom: -31%
-        right: -11%
     &__wrapper
         display: flex
         gap: 24px
         align-items: center
+        span
+            @include font(30px, 400, $base-color-text, 20px)
+            text-transform: uppercase
     &__range
         appearance: none
         height: 6px
         border-radius: 6px
         background: rgb(220, 220, 220)
         width: 428px
+        &-box
+            padding-right: 0
         &::-webkit-slider-thumb
             appearance: none 
             height: 40px
@@ -225,6 +230,9 @@ a
     &__container 
         display: grid
         align-items: end
+    &__inner    
+            display: grid
+            justify-items: center
 
         
 
