@@ -96,6 +96,9 @@
         gap: 10px
     .map__heading
         margin-right: 0
+    .products__items 
+        gap: 60px
+
 @media (max-width: 900px)
     .header__logo
         width: 174px
@@ -174,7 +177,12 @@
         align-items: flex-end
     .example__img   
         width: 530px
+    .products 
+        padding-top: 65px
+        &__img--big
+            max-width: 168px
 
+            
     
 @media (max-width: 600px)
     .top__img
@@ -292,11 +300,62 @@
     .map__text
         font-size: 14px
         line-height: 20px
-    
-
+    .products
+        padding-top: 27px
+        h2
+            padding-bottom: 40px
+        &__item
+            border: 1px solid rgb(235, 235, 235)
+            padding: 20px
+            margin-top: 0
+            height: 190px
+            
+        &__item:not(.products__item--add)
+            display: grid
+            grid-template-columns: 1fr 1fr 1fr
+            grid-template-rows: 1fr 1fr 1fr
+            gap: 0px 0px
+            grid-template-areas: "img title title" "img desc desc" "btn btn btn"
+        &__img
+            grid-area: img
+            max-width: 100px
+            padding-bottom: 0
+            &--big
+                max-width: 120px
+        &__title
+            grid-area: title
+            font-size: 16px
+            text-align: left
+            padding-bottom: 20px
+            &--add  
+                margin: 15px 0 0
+                padding-bottom: 8px
+        &__inner
+            grid-area: desc
+        &__btn
+            grid-area: btn
+            margin-top: 10px
+            font-size: 16px
+            &--white
+                margin-top: 0
+        &__items
+            padding-top: 0
+            gap: 0
+        &__wrap
+            padding-top: 0
+            padding-bottom:0
+            border: none
+        &__text
+            font-size: 12px
+        &__icon
+            width: 30px
+            height: 30px
 @media (max-width: 375px)
     .top__img
         left: 4%
     .example__img 
         width: 280px
-    
+    .products__img
+        max-width: 72px
+        &--big
+            max-width: 84px

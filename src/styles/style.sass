@@ -1,39 +1,14 @@
-@import 'mixins.sass'
-@import 'var.sass'
-
-@font-face 
-    font-family: "Arial"
-    src: url("../fonts/arialmt.ttf") format("ttf")
-    font-weight: 400
-
-
-* 
-    margin: 0
-    padding: 0
-    box-sizing: border-box
-
-
-body
-    font-family: "Oswald", system-ui
-    font-weight: 400
-    color: #000000
-    font-size: 16px
-
-button 
-    cursor: pointer
-
-a
-    text-decoration: none
-
-.center
-    padding-left:  calc(50% - 1220px / 2)
-    padding-right: calc(50% - 1220px / 2)
+@import 'main.sass'
 
 .container
     background-image: url('../img/top-bg.jpg')
     background-position: right
     background-repeat: no-repeat
     background-size: 50%
+
+.center
+    padding-left:  calc(50% - 1220px / 2)
+    padding-right: calc(50% - 1220px / 2)
 
 .header
     display: flex
@@ -285,4 +260,6 @@ a
         display: flex
         align-items: center
         gap: 28px
+    
+@import 'catalog.sass'
 @import 'adaptive.sass'

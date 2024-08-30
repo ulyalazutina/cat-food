@@ -1,0 +1,67 @@
+.catalog-link
+        color: $base-color-text
+
+.products
+    padding-top: 74px
+    &__items
+        display: grid
+        grid-template-columns: repeat(auto-fit, minmax(245px, 1fr))
+        gap: 80px
+        padding-top: 84px
+    &__item
+        height: 431px
+        padding: 39px
+        position: relative
+        display: flex
+        flex-direction: column
+        justify-content: flex-end
+        background-color: #F2F2F2
+        margin-top: 81px
+        &--add
+            background-color: #F2F2F2
+            border: 2px solid rgb(242, 242, 242)
+            align-items: center
+    &__img
+        position: sticky
+        align-self: center
+        max-width: 161px
+        padding-bottom: 45px
+        &--big
+            max-width: 172px
+
+    &__title
+        @include font(21px, 400, #222222, 20px)
+        text-transform: uppercase
+        text-align: center
+        &--add  
+            margin: 49px 0 23px
+    &__inner
+        display: grid   
+    &__wrap
+        display: flex
+        justify-content: space-between
+        align-items: center
+        padding-bottom: 10px
+        padding-top: 10px
+        border-bottom: 1px solid #CDCDCD
+    &__text
+        @include font(16px, 400, #444444)
+        font-family: $font-text
+        &--add
+            text-align: center
+    &__btn
+        @include font(20px, 400, $lignt-color-text)
+        text-align: center
+        text-transform: uppercase
+        padding: 10px 45px
+        background-color: $accent-color
+        border: none
+        margin-top: 33px
+        &--white
+            background-color: rgb(242, 242, 242)
+            color: #444444
+            padding: 10px 0
+            margin-top: 87px
+    &__icon
+        width: 60px
+        height: 60px
