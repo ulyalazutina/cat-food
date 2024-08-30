@@ -65,3 +65,61 @@
     &__icon
         width: 60px
         height: 60px
+
+.other
+    padding-top: 75px
+    padding-bottom: 86px
+    &__title
+        @include font(36px, 400, $base-color-text, 36px )
+    &__container
+        padding-top: 80px
+        display: flex
+        justify-content: space-between
+        gap: 80px
+        align-items: center
+    &__items
+        display: grid
+    &__item
+        display: grid
+        grid-template-columns: repeat(4, 1fr)
+        padding: 15px 0
+        border-top: 1px solid rgb(205, 205, 205) 
+        gap: 40px
+        align-items: center
+        &:last-child
+            border-bottom: 1px solid rgb(205, 205, 205)
+    &__btn
+        @include font(20px, 400, $lignt-color-text )
+        width: 244px
+        border: none
+        text-align: center
+        text-transform: uppercase
+        background-color: $accent-color
+        padding: 8px 0
+    &__subtitle
+        @include font(20px, 400, #222222, 20px )
+        text-transform: uppercase
+        width: 250px
+    &__text
+        @include font(20px, 400, #444444 )
+        font-family: $font-text  
+        &--price
+            justify-self: end
+    &__text-banner
+        @extend .other__text
+        color: $lignt-color-text
+        text-align: center
+    &__banner
+        background-image: url('../img/gift-bg.jpeg')
+        background-repeat: no-repeat
+        background-size: cover
+        background-position: center
+        padding: 56px 42px 42px
+        width: 242px
+        display: flex
+        flex-direction: column
+        justify-items: center
+        gap: 46px
+    &__img
+        max-width: 80px
+    
