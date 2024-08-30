@@ -10,6 +10,8 @@
     .center 
         padding-left: 110px
         padding-right: 110px
+    .other__title::before
+        margin-left: -91%
     .top__wrapper
         margin-left: 0
     .example__range-box
@@ -62,9 +64,9 @@
         padding-right: 110px
     .example__container
         padding-left: 110px
-
+    .other__subtitle
+        width: 170px
     
-
 @media (max-width: 1179px)
     .catalog 
         gap: 20px
@@ -82,12 +84,47 @@
         position: static
         max-width: 100%
         margin-right: 110px
-
-
+    .other__item
+        grid-template-columns: repeat(3, 1fr)
+    .other__subtitle
+        grid-row-start: 1
+        grid-column-start: 1
+        grid-row-end: 2
+        grid-column-end: 2
+    .other__text
+        grid-row-start: 1
+        grid-column-start: 2
+        grid-row-end: 2
+        grid-column-end: 3
+        &--price
+            grid-row-start: 1
+            grid-column-start: 3
+            grid-row-end: 2
+            grid-column-end: 4
+    .other__btn
+        grid-row-start: 2
+        grid-column-start: 1
+        grid-row-end: 3
+        grid-column-end: 4
+        width: 100%
+    .other__container
+        flex-direction: column
+        gap: 69px
+    .other__items, .other__banner
+        width: 100%
+    .other__banner
+        background-image: url('../img/gift-bg-tablet.jpeg')
+        align-items: center
+    
 @media (max-width: 1024px)
     .center
         padding-left: 60px
         padding-right: 60px 
+    .other__title::before
+        margin-left: -94%
+        right: 36px
+    .other__title::after
+        left: 36px
     .map__wrapper
         margin-left: 60px
         margin-right: 60px
@@ -96,6 +133,9 @@
         gap: 10px
     .map__heading
         margin-right: 0
+    .products__items 
+        gap: 60px
+
 @media (max-width: 900px)
     .header__logo
         width: 174px
@@ -174,8 +214,16 @@
         align-items: flex-end
     .example__img   
         width: 530px
+    .products 
+        padding-top: 65px
+        &__img--big
+            max-width: 168px
+    .other 
+        padding-top: 80px
+        padding-bottom: 76px
+        &__container
+            padding-top: 26px
 
-    
 @media (max-width: 600px)
     .top__img
         width: 450px
@@ -220,7 +268,6 @@
             justify-content: center
             padding: 20px 0
     
-
 @media (max-width: 556px)
     .works__item
         display: flex
@@ -292,11 +339,101 @@
     .map__text
         font-size: 14px
         line-height: 20px
-    
+    .products
+        padding-top: 27px
+        h2
+            padding-bottom: 40px
+        &__item
+            border: 1px solid rgb(235, 235, 235)
+            padding: 20px
+            margin-top: 0
+            height: 190px
+            
+        &__item:not(.products__item--add)
+            display: grid
+            grid-template-columns: 1fr 1fr 1fr
+            grid-template-rows: 1fr 1fr 1fr
+            gap: 0px 0px
+            grid-template-areas: "img title title" "img desc desc" "btn btn btn"
+        &__img
+            grid-area: img
+            max-width: 100px
+            padding-bottom: 0
+            &--big
+                max-width: 120px
+        &__title
+            grid-area: title
+            font-size: 16px
+            text-align: left
+            padding-bottom: 20px
+            &--add  
+                margin: 15px 0 0
+                padding-bottom: 8px
+        &__inner
+            grid-area: desc
+        &__btn
+            grid-area: btn
+            margin-top: 10px
+            font-size: 16px
+            &--white
+                margin-top: 0
+        &__items
+            padding-top: 0
+            gap: 0
+        &__wrap
+            padding-top: 0
+            padding-bottom:0
+            border: none
+        &__text
+            font-size: 12px
+        &__icon
+            width: 30px
+            height: 30px
+    .other 
+        padding-top: 28px
+        padding-bottom: 35px
+        &__title    
+            font-size: 24px
+            line-height: 24px
+        &__container
+            padding-top: 34px
+            gap: 40px
+        &__item
+            grid-template-columns: repeat(2, 1fr)
+            gap: 15px
+        &__subtitle
+            grid-row-start: 1
+            grid-row-end: 2
+            grid-column-start: 1
+            grid-column-end: 3
+            font-size: 16px
+            line-height: 16px
+        &__text
+            grid-row-start: 2
+            grid-row-end: 3
+            grid-column-start: 1
+            grid-column-end: 2
+            font-size: 14px
+            line-height: 14px
+            &--price
+                grid-row-start: 2
+                grid-row-end: 3
+                grid-column-start: 2
+                grid-column-end: 3
+        &__btn
+            grid-row-start: 3
+            grid-row-end: 4
+            grid-column-start: 1
+            grid-column-end: 3
+            font-size: 16px
+
 
 @media (max-width: 375px)
     .top__img
         left: 4%
     .example__img 
         width: 280px
-    
+    .products__img
+        max-width: 72px
+        &--big
+            max-width: 84px

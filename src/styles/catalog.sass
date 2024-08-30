@@ -1,0 +1,148 @@
+.catalog-link
+        color: $base-color-text
+
+.products
+    padding-top: 74px
+    &__items
+        display: grid
+        grid-template-columns: repeat(auto-fit, minmax(245px, 1fr))
+        gap: 80px
+        padding-top: 84px
+    &__item
+        height: 431px
+        padding: 39px
+        position: relative
+        display: flex
+        flex-direction: column
+        justify-content: flex-end
+        background-color: #F2F2F2
+        margin-top: 81px
+        &--add
+            background-color: #F2F2F2
+            border: 2px solid rgb(242, 242, 242)
+            align-items: center
+    &__img
+        position: sticky
+        align-self: center
+        max-width: 161px
+        padding-bottom: 45px
+        &--big
+            max-width: 172px
+
+    &__title
+        @include font(21px, 400, #222222, 20px)
+        text-transform: uppercase
+        text-align: center
+        &--add  
+            margin: 49px 0 23px
+    &__inner
+        display: grid   
+    &__wrap
+        display: flex
+        justify-content: space-between
+        align-items: center
+        padding-bottom: 10px
+        padding-top: 10px
+        border-bottom: 1px solid #CDCDCD
+    &__text
+        @include font(16px, 400, #444444)
+        font-family: $font-text
+        &--add
+            text-align: center
+    &__btn
+        @include font(20px, 400, $lignt-color-text)
+        text-align: center
+        text-transform: uppercase
+        padding: 10px 45px
+        background-color: $accent-color
+        border: none
+        margin-top: 33px
+        &--white
+            background-color: rgb(242, 242, 242)
+            color: #444444
+            padding: 10px 0
+            margin-top: 87px
+    &__icon
+        width: 60px
+        height: 60px
+
+.other
+    padding-top: 75px
+    padding-bottom: 86px
+    &__title
+        @include font(36px, 400, $base-color-text, 36px )
+        overflow: hidden
+        &::before
+            background-color: $accent-color
+            content: ""
+            display: inline-block
+            height: 2px
+            position: relative
+            vertical-align: middle
+            width: 100%
+            right: 40px
+            margin-left: calc(-50% - 1220px / 2)
+        &::after
+            background-color: $accent-color
+            content: ""
+            display: inline-block
+            height: 2px
+            position: relative
+            vertical-align: middle
+            width: 100%
+            left: 40px
+            margin-right: -100%
+            
+    &__container
+        padding-top: 80px
+        display: flex
+        justify-content: space-between
+        gap: 80px
+        align-items: center
+    &__items
+        display: grid
+    &__item
+        display: grid
+        grid-template-columns: repeat(4, 1fr)
+        padding: 15px 0
+        border-top: 1px solid rgb(205, 205, 205) 
+        gap: 40px
+        align-items: center
+        &:last-child
+            border-bottom: 1px solid rgb(205, 205, 205)
+    &__btn
+        @include font(20px, 400, $lignt-color-text )
+        width: 244px
+        border: none
+        text-align: center
+        text-transform: uppercase
+        background-color: $accent-color
+        padding: 8px 0
+    &__subtitle
+        @include font(20px, 400, #222222, 20px )
+        text-transform: uppercase
+        width: 250px
+    &__text
+        @include font(20px, 400, #444444 )
+        font-family: $font-text  
+        &--price
+            justify-self: end
+    &__text-banner
+        @extend .other__text
+        color: $lignt-color-text
+        text-align: center
+    &__banner
+        background-image: url('../img/gift-bg.jpeg')
+        background-repeat: no-repeat
+        background-size: cover
+        background-position: center
+        padding: 56px 42px 42px
+        width: 242px
+        display: flex
+        flex-direction: column
+        justify-items: center
+        gap: 46px
+        align-items: center
+    &__img
+        max-width: 80px
+    
