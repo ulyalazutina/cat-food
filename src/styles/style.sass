@@ -162,6 +162,7 @@ a
     &__item
         display: grid
         gap: 31px
+        padding: 57px 0
     &__text
         @include font(24px, 400, #444444, 16px)
         font-family: $font-text
@@ -234,6 +235,25 @@ a
             display: grid
             justify-items: center
 
-        
+.map  
+    position: relative
+    &__wrapper
+        background-color: $lignt-color-text
+        padding: 66px 76px
+        display: flex
+        max-width: 570px
+        position: absolute
+        margin-left: calc(50% - 1220px / 2)
+        top: 28%
+    &__heading
+        @include font(21px, 400, $base-color-text, 20px)
+        text-transform: uppercase
+        margin-right: 87px
+    &__text
+        @include font(20px, 400, #444444, 16px)
+        font-family: $font-text
+    &__img
+        width: 100%
+
 
 @import 'adaptive.sass'

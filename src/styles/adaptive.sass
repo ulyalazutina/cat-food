@@ -16,6 +16,9 @@
         padding-right: 0
     .example__container
         padding-left: 0
+    .map__wrapper
+        top: 25%
+        margin-left: 110px
 
 @media (max-width: 1280px)
     .container
@@ -29,6 +32,9 @@
     .example__box 
         flex-direction: column
         background-color: $lignt-color-text
+        height: 100%
+        padding-bottom: 0
+        padding-top: 0
     .example__container,.example__range
         width: 100%
     .example__img
@@ -36,12 +42,10 @@
         margin: 0 auto
     .example__container
         background-color: #F2F2F2
+        padding-bottom: 40px
     .example__heading
         padding-top: 43px
         padding-bottom: 63px
-    .example__box
-        padding-top: 0
-        padding-bottom: 59px  
     .example__range-box
         display: grid
         align-items: center
@@ -58,6 +62,7 @@
         padding-right: 110px
     .example__container
         padding-left: 110px
+
     
 
 @media (max-width: 1179px)
@@ -73,13 +78,24 @@
         top: 15%    
     .catalog__text
         width: 57%
+    .map__wrapper
+        position: static
+        max-width: 100%
+        margin-right: 110px
 
 
 @media (max-width: 1024px)
     .center
         padding-left: 60px
-        padding-right: 60px
-
+        padding-right: 60px 
+    .map__wrapper
+        margin-left: 60px
+        margin-right: 60px
+        padding: 66px 0
+        justify-content: space-between
+        gap: 10px
+    .map__heading
+        margin-right: 0
 @media (max-width: 900px)
     .header__logo
         width: 174px
@@ -103,6 +119,8 @@
         gap: 40px
     .example__box
         gap: 70px
+    .works__item
+        padding: 40px 0
 
 @media (max-width: 750px)
     .header__logo
@@ -156,6 +174,7 @@
         align-items: flex-end
     .example__img   
         width: 530px
+
     
 @media (max-width: 600px)
     .top__img
@@ -186,12 +205,15 @@
             padding: 22px
     .example__img
         width: 450px
+    .map__img
+        height: 300px
     
 
 @media (max-width: 556px)
     .works__item
         display: flex
         gap: 20px
+        padding: 0
     .works__img
         width: 60px
     .works__items
@@ -247,7 +269,17 @@
         width: 350px
     .example, .example__box
         background-color: #F2F2F2
-
+    .works 
+        padding-bottom: 40px
+    .map__heading
+        font-size: 16px
+        line-height: 18px
+    .map__wrapper
+        padding-top: 28px
+        padding-bottom: 22px
+    .map__text
+        font-size: 14px
+        line-height: 20px
     
 
 @media (max-width: 375px)
