@@ -1,0 +1,55 @@
+.selection
+    padding-top: 74px
+    padding-bottom: 69px
+    &__text
+        @include font(30px, 400, $base-color-text, 20px)
+        text-transform: uppercase
+        max-width: 323px
+        margin-top: 56px
+        margin-bottom: 66px
+    &__form
+        display: flex
+        justify-content: space-between
+        align-items: center
+        gap: 80px
+    &__input-box 
+        border: none
+        display: grid
+        gap: 20px
+        width: 569px
+    &__input-label
+        @include font(30px, 400, #444444, 20px)
+        display: flex
+        gap: 13px
+        text-wrap: nowrap
+        align-items: center
+    &__input
+        padding: 11px 20px
+        border: 1px solid rgb(231, 231, 231)
+        @include font(30px, 400, #444444, 20px)
+        width: 100%
+        &::placeholder
+            color: #E7E7E7
+    &__radio-box
+        border: 1px solid rgb(231, 231, 231)
+        padding: 25px 28px
+        display: grid
+        gap: 13px
+        width: 570px
+    &__radio-text
+        @include font(30px, 400, #222222, 20px)
+        text-transform: uppercase
+        display: flex
+        align-items: center
+        gap: 20px
+    &__radio
+        border: 1px solid rgb(205, 205, 205)
+        width: 40px
+        height: 40px
+        appearance: none
+        border-radius: 50%
+        padding: 11px
+        background: radial-gradient(farthest-side,$accent-color 94%,#0000) 50%/0 0 no-repeat content-box
+        &:checked
+            border-color: rgb(205, 205, 205)
+            background-size: 100% 100%

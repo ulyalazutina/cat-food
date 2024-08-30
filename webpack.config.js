@@ -15,6 +15,7 @@ module.exports = ({ develop }) => ({
     entry: {
         index: path.resolve(__dirname, "src/js/index.js"),
         catalog: path.resolve(__dirname, "src/js/catalog.js"),
+        program: path.resolve(__dirname, "src/js/program.js"),
     },
     output: {
         path: path.resolve(__dirname, "dist"),
@@ -33,6 +34,11 @@ module.exports = ({ develop }) => ({
             filename: 'catalog.html',
             template: path.resolve(__dirname, 'src/catalog.html'), 
             chunks: ['catalog'],
+        }),
+        new HtmlWebpackPlugin({ 
+            filename: 'program.html',
+            template: path.resolve(__dirname, 'src/program.html'), 
+            chunks: ['program'],
         }),
         new MiniCssExtractPlugin({ filename: develop ? 'css/main.css' : 'css/[name].[contenthash:8].css' }),
     ],
