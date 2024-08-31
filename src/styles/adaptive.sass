@@ -10,7 +10,7 @@
     .center 
         padding-left: 110px
         padding-right: 110px
-    .other__title::before
+    .subtitle::before
         margin-left: -91%
     .top__wrapper
         margin-left: 0
@@ -124,10 +124,10 @@
     .center
         padding-left: 60px
         padding-right: 60px 
-    .other__title::before
+    .subtitle::before
         margin-left: -94%
         right: 36px
-    .other__title::after
+    .subtitle::after
         left: 36px
     .map__wrapper
         margin-left: 60px
@@ -167,8 +167,14 @@
         padding: 40px 0
     .selection
         padding-top: 65px  
+        padding-bottom: 71px
         &__text
             margin-top: 54px
+    .contact
+        padding-bottom: 65px
+        &__box
+            gap: 20px
+            
 @media (max-width: 750px)
     .header__logo
         width: 70px
@@ -230,7 +236,9 @@
         padding-bottom: 76px
         &__container
             padding-top: 26px
-
+    .subtitle    
+        font-size: 30px
+        line-height: 30px
 @media (max-width: 600px)
     .top__img
         width: 450px
@@ -399,9 +407,7 @@
     .other 
         padding-top: 28px
         padding-bottom: 35px
-        &__title    
-            font-size: 24px
-            line-height: 24px
+       
         &__container
             padding-top: 34px
             gap: 40px
@@ -435,6 +441,7 @@
             font-size: 16px
     .selection 
         padding-top: 18px
+        padding-bottom: 48px
         &__text
             margin-top: 37px
             margin-bottom: 39px
@@ -461,6 +468,30 @@
             width: 30px
             height: 30px
             padding: 8px
+    .subtitle    
+        font-size: 24px
+        line-height: 24px
+    .contact
+        padding-bottom: 27px
+        &__box
+            margin-top: 32px 
+            gap: 14px
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr))
+        &__label
+            font-size: 16px
+            line-height: 18px
+            gap: 12px
+        &__input
+            font-size: 16px
+            line-height: 18px
+            padding: 14px 15px
+
+@media (max-width: 400px)
+    .subtitle::before, .subtitle::after
+        display: none
+    .subtitle
+        padding-right: 20px
+        padding-left: 20px
 
 @media (max-width: 375px)
     .top__img

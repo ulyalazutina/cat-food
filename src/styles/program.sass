@@ -24,11 +24,13 @@
         gap: 13px
         text-wrap: nowrap
         align-items: center
+        text-transform: uppercase
     &__input
         padding: 11px 20px
         border: 1px solid rgb(231, 231, 231)
         @include font(30px, 400, #444444, 20px)
         width: 100%
+        text-transform: uppercase
         &::placeholder
             color: #E7E7E7
     &__radio-box
@@ -54,3 +56,29 @@
         &:checked
             border-color: rgb(205, 205, 205)
             background-size: 100% 100%
+
+.contact
+    padding-bottom: 67px
+    &__box
+        margin-top: 76px
+        border: none
+        display: grid
+        grid-template-columns: repeat(auto-fit, minmax(450px, 1fr))
+        gap: 78px
+    &__label
+        @include font(30px, 400, #444444, 20px)
+        display: flex
+        gap: 20px
+        text-transform: uppercase
+        align-items: center
+        text-wrap: nowrap
+    &__input
+        @include font(30px, 400, #444444, 20px)
+        text-transform: uppercase
+        padding: 10px 19px 
+        width: 100%
+        border: none
+        border: 1px solid rgb(205, 205, 205)
+        &::placeholder
+            color: #E7E7E7
+
