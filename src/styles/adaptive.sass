@@ -119,6 +119,21 @@
     .other__banner
         background-image: url('../img/gift-bg-tablet.jpeg')
         align-items: center
+    .dop
+        padding-bottom: 72px
+        &__wrapper
+            margin-top: 57px
+            gap: 54px
+        &__box
+            grid-template-columns: repeat(2, 1fr)
+            gap: 32px
+            justify-items: start
+        &__wrap
+            gap: 61px
+        &__btn
+            padding: 14px 45px
+
+
     
 @media (max-width: 1024px)
     .center
@@ -496,6 +511,30 @@
             padding: 13px 15px
             &:placeholder
                 font-size: inherit
+    .dop
+        padding-bottom: 32px
+        &__wrapper
+            margin-top: 34px
+            gap: 34px
+        &__box
+            grid-template-columns: repeat(1, 1fr)
+            gap: 12px
+        &__label
+            gap: 15px
+            font-size: 16px
+            line-height: 18px
+        &__checkbox
+            width: 30px
+            height: 30px
+        &__wrap
+            gap: 21px
+            justify-content: center
+        &__btn
+            padding: 14px 44px
+            font-size: 16px
+        &__text
+            font-size: 14px
+
 
 @media (max-width: 400px)
     .subtitle::before, .subtitle::after

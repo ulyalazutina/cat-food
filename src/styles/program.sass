@@ -103,3 +103,54 @@
         border: 1px solid rgb(231, 231, 231)
         &:placeholder
             font-size: inherit
+
+.dop
+    padding-bottom: 82px
+    &__wrapper
+        margin-top: 87px
+        display: grid
+        gap: 61px
+    &__box
+        display: grid
+        grid-template-columns: repeat(4, 1fr)
+        justify-content: space-between
+        align-items: center
+        gap: 50px
+        border: none
+        justify-items: center
+    &__label
+        display: flex
+        align-items: center
+        text-wrap: nowrap
+        gap: 19px
+        @include font(30px, 400, $base-color-text, 20px)
+        text-transform: uppercase
+    &__checkbox
+        appearance: none
+        border: 1px solid rgb(205, 205, 205)
+        width: 40px
+        height: 40px
+        &:checked
+            appearance: none
+            border: 1px solid rgb(205, 205, 205)
+            background-color: transparent
+            background-image: url('../img/check.svg')   
+            background-repeat: no-repeat
+            background-position: center
+    &__wrap
+        display: flex
+        gap: 81px
+        flex-wrap: wrap
+        align-items: center
+    &__btn
+        padding: 14px 188px
+        @include font(20px, 400, $lignt-color-text, 20px)
+        text-transform: uppercase
+        text-align: center
+        border: none
+        outline: none
+        background-color: $accent-color
+    &__text
+        @include font(16px, 400, $base-color-text)
+        font-family: $font-text
+
