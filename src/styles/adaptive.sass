@@ -199,7 +199,19 @@
     .burger-menu
         display: block
     .header__nav
-        display: none
+        visibility: hidden
+        &::before
+            content: ''
+            display: block
+            position: absolute
+            top: 0
+            left: 0
+            right: -20px
+            bottom: 0
+            background: $accent-color
+            transform-origin: 0 0
+            transform: skew(347deg) translateX(-120%)
+            transition: transform .6s 
     .header 
         padding-top: 35px
         padding-bottom: 18px

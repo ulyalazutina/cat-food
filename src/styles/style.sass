@@ -18,6 +18,31 @@
     &__nav
         display: flex
         gap: 34px
+
+    &__nav.open
+        display: grid
+        position: fixed
+        backdrop-filter: blur(10px)
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        z-index: 10
+        align-items: center
+        align-content: center
+        justify-items: center
+        transition: transform .6s 
+
+        &::before
+            transform: skew(347deg) translateX(0)
+
+        &>.header__link
+            z-index: 13
+            font-size: 25px
+            padding: 15px 0
+            
+
+
     &__link 
         @include font(30px, 400, $lignt-color-text, 20px)
         text-transform: uppercase
@@ -48,20 +73,18 @@
         &:nth-child(3)
             top: 16px
             left: 0
-    &:not(.open):hover span:nth-child(1) 
-        transform: rotate(-3deg) scaleY(1.1)
-    &:not(.open):hover span:nth-child(2) 
-        transform: rotate(3deg) scaleY(1.1)
-    &:not(.open):hover span:nth-child(3)
-        transform: rotate(-4deg) scaleY(1.1)
     &.open span:nth-child(1) 
         transform: rotate(45deg)
         top: 13px
+        z-index: 12
+
     &.open span:nth-child(2) 
         opacity: 0
     &.open span:nth-child(3) 
         transform: rotate(-45deg)
         top: 13px
+        z-index: 12
+
 
 .title
     @include font(60px, 400, $base-color-text, 60px)
