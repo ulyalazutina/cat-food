@@ -21,6 +21,10 @@
     .map__wrapper
         top: 25%
         margin-left: 110px
+    .selection__input-box, .selection__radio-box
+        width: 100%
+    .selection__form
+        gap: 72px
 
 @media (max-width: 1280px)
     .container
@@ -161,7 +165,10 @@
         gap: 70px
     .works__item
         padding: 40px 0
-
+    .selection
+        padding-top: 65px  
+        &__text
+            margin-top: 54px
 @media (max-width: 750px)
     .header__logo
         width: 70px
@@ -426,7 +433,34 @@
             grid-column-start: 1
             grid-column-end: 3
             font-size: 16px
-
+    .selection 
+        padding-top: 18px
+        &__text
+            margin-top: 37px
+            margin-bottom: 39px
+            font-size: 14px
+            line-height: 18px
+        &__form
+            gap: 47px
+        &__input-box
+            gap: 10px
+        &__input-label
+            font-size: 16px
+            line-height: 18px
+        &__input
+            font-size: 16px
+            line-height: 18px
+            padding: 14px 15px
+            &:placeholder
+                font-size: inherit
+        &__radio-text
+            gap: 15px
+            font-size: 16px
+            line-height: 18px
+        &__radio
+            width: 30px
+            height: 30px
+            padding: 8px
 
 @media (max-width: 375px)
     .top__img
