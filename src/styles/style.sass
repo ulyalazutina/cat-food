@@ -79,11 +79,13 @@
         margin-top: 40px
         margin-bottom: 52px
     &__btn
-        @include font(20px, 400, $lignt-color-text, 20px)
         text-transform: uppercase
         padding: 14px 26px
         border: none
         background-color: $accent-color
+        a
+            @include font(20px, 400, $lignt-color-text, 20px)
+            
     &__img
         position: absolute
         bottom: 2%
@@ -262,4 +264,5 @@
         gap: 28px
     
 @import 'catalog.sass'
+@import 'program.sass'
 @import 'adaptive.sass'

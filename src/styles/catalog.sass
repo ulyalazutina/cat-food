@@ -68,31 +68,7 @@
 
 .other
     padding-top: 75px
-    padding-bottom: 86px
-    &__title
-        @include font(36px, 400, $base-color-text, 36px )
-        overflow: hidden
-        &::before
-            background-color: $accent-color
-            content: ""
-            display: inline-block
-            height: 2px
-            position: relative
-            vertical-align: middle
-            width: 100%
-            right: 40px
-            margin-left: calc(-50% - 1220px / 2)
-        &::after
-            background-color: $accent-color
-            content: ""
-            display: inline-block
-            height: 2px
-            position: relative
-            vertical-align: middle
-            width: 100%
-            left: 40px
-            margin-right: -100%
-            
+    padding-bottom: 86px            
     &__container
         padding-top: 80px
         display: flex
@@ -145,4 +121,27 @@
         align-items: center
     &__img
         max-width: 80px
-    
+
+.subtitle
+        @include font(36px, 400, $base-color-text, 36px )
+        overflow: hidden
+        &::before
+            background-color: $accent-color
+            content: ""
+            display: inline-block
+            height: 2px
+            position: relative
+            vertical-align: middle
+            width: 100%
+            right: 40px
+            margin-left: calc(-50% - 1220px / 2)
+        &::after
+            background-color: $accent-color
+            content: ""
+            display: inline-block
+            height: 2px
+            position: relative
+            vertical-align: middle
+            width: 100%
+            left: 40px
+            margin-right: -100%  
