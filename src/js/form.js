@@ -8,8 +8,8 @@ const commentElement = document.getElementById('comment');
 const optionallyElements = document.getElementById('optionally');
 const submitBtn = document.querySelector('.dop__btn');
 
-let name;
-let weight;
+let name = "";
+let weight = "";
 let age;
 let email;
 let phone;
@@ -44,11 +44,8 @@ optionallyElements.addEventListener('input', (e) => {
 });
 
 
-
-
 export const formData = () => {
-    submitBtn.addEventListener('click', (e) => {
-        e.preventDefault();
+    submitBtn.addEventListener('click', () => {
         switch (purpose) {
             case "loss":
                 purpose = "Похудение"

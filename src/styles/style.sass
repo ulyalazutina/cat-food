@@ -47,6 +47,11 @@
     &__link 
         @include font(30px, 400, $lignt-color-text, 20px)
         text-transform: uppercase
+        transition: color .2s
+        &:hover
+            color: rgba(255, 255, 255, 0.418)
+        &--active
+            border-bottom: 2px solid rgb(255, 255, 255)
     &__logo--mobile
         display: none
 
@@ -107,8 +112,14 @@
         padding: 14px 26px
         border: none
         background-color: $accent-color
+        transition: backgroundColor .2s
+        &:hover 
+            background-color: rgb(94, 170, 47)
+        &:active>a
+            color: rgb(255, 255, 255, 0.3)
         a
             @include font(20px, 400, $lignt-color-text, 20px)
+            transition: color .3s
             
     &__img
         position: absolute
@@ -141,6 +152,9 @@
         @include font(30px, 400, $base-color-text, 20px)
         text-transform: uppercase
         position: relative
+        transition: color .2s
+        &:hover 
+            color: rgba(0, 0, 0, 0.548)
         &::after
             content: ''
             background-image: url('../img/arrow.svg')
@@ -227,9 +241,13 @@
         display: flex
         gap: 24px
         align-items: center
+        transition: borderBottom .2s
         span
             @include font(30px, 400, $base-color-text, 20px)
             text-transform: uppercase
+            border-bottom: dotted 1px black
+        &:hover>span
+            border-bottom: solid 1px black
     &__range
         appearance: none
         height: 6px
@@ -246,6 +264,9 @@
             border-radius: 50%
             border: 2px solid rgb(205, 205, 205)
             cursor: pointer
+            &:active
+                border: 1px solid $accent-color
+            
     &__container 
         display: grid
         align-items: end

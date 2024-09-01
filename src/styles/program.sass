@@ -31,8 +31,15 @@
         @include font(30px, 400, #444444, 20px)
         width: 100%
         text-transform: uppercase
+        transition: borderColor .3s
         &::placeholder
             color: #E7E7E7
+        &:hover
+            border-color: rgb(205, 205, 205)
+        &:active
+            border-color: rgb(68, 68, 68)
+        &:invalid
+            border-color: rgb(255, 130, 130)
     &__radio-box
         border: 1px solid rgb(231, 231, 231)
         padding: 25px 28px
@@ -79,8 +86,15 @@
         width: 100%
         border: none
         border: 1px solid rgb(205, 205, 205)
+        transition: borderColor .3s
         &::placeholder
             color: #E7E7E7
+        &:hover
+            border-color: rgb(205, 205, 205)
+        &:active
+            border-color: rgb(68, 68, 68)
+        &:invalid
+            border-color: rgb(255, 130, 130)
         &#email
             background-image: url('../img/email.svg')
             background-repeat: no-repeat
@@ -101,9 +115,15 @@
         padding: 10px 19px
         text-transform: uppercase
         border: 1px solid rgb(231, 231, 231)
-        &:placeholder
-            font-size: inherit
+        transition: borderColor .3s
+        &::placeholder
             color: #E7E7E7
+        &:hover
+            border-color: rgb(205, 205, 205)
+        &:active
+            border-color: rgb(68, 68, 68)
+        &:invalid
+            border-color: rgb(255, 130, 130)
 
 .dop
     padding-bottom: 82px
@@ -151,6 +171,8 @@
         border: none
         outline: none
         background-color: $accent-color
+        &:disabled
+            background: gray
     &__text
         @include font(16px, 400, $base-color-text)
         font-family: $font-text
