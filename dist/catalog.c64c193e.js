@@ -1,0 +1,1 @@
+(()=>{"use strict";const e=document.querySelector(".burger-menu"),t=document.querySelector(".header__nav"),c=document.querySelector("body");e.addEventListener("click",(()=>{e.classList.toggle("open"),c.classList.toggle("hidden"),t.classList.toggle("open")}))})();
