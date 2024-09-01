@@ -1,5 +1,10 @@
 .catalog-link
         color: $base-color-text
+        transition: color .2s
+        &--active
+            border-bottom: 2px solid $accent-color
+        &:hover
+            color: rgba(0, 0, 0, 0.47)
 
 .products
     padding-top: 74px
@@ -57,11 +62,21 @@
         background-color: $accent-color
         border: none
         margin-top: 33px
+        transition: backgroundColor .2s, color .3s
+        &:hover 
+            background-color: rgb(94, 170, 47)
+        &:active 
+            color: rgb(255, 255, 255, 0.3)
         &--white
             background-color: rgb(242, 242, 242)
             color: #444444
             padding: 10px 0
             margin-top: 87px
+            transition: backgroungColor .2s, color .3s
+            &:hover 
+                background-color: rgb(235, 235, 235)
+            &:active 
+                color: rgb(68, 68, 68, 0.3)
     &__icon
         width: 60px
         height: 60px

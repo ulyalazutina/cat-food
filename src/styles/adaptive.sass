@@ -43,9 +43,6 @@
         padding-top: 0
     .example__container,.example__range
         width: 100%
-    .example__img
-        position: static
-        margin: 0 auto
     .example__container
         background-color: #F2F2F2
         padding-bottom: 40px
@@ -68,9 +65,14 @@
         padding-right: 110px
     .example__container
         padding-left: 110px
+        height: 520px
     .other__subtitle
         width: 170px
-    
+    .example__slider-img
+        width: 50%
+        height: 450px
+        top: -19rem
+        left: 25%
 @media (max-width: 1179px)
     .catalog 
         gap: 20px
@@ -200,6 +202,18 @@
         display: block
     .header__nav
         display: none
+        &::before
+            content: ''
+            display: block
+            position: absolute
+            top: 0
+            left: 0
+            right: -20px
+            bottom: 0
+            background: $accent-color
+            transform-origin: 0 0
+            transform: skew(347deg) translateX(-120%)
+            transition: transform .6s 
     .header 
         padding-top: 35px
         padding-bottom: 18px
@@ -240,8 +254,6 @@
         flex-direction: column
         gap: 8px
         align-items: flex-end
-    .example__img   
-        width: 530px
     .products 
         padding-top: 65px
         &__img--big
@@ -254,6 +266,7 @@
     .subtitle    
         font-size: 30px
         line-height: 30px
+
 @media (max-width: 600px)
     .top__img
         width: 450px
@@ -281,8 +294,6 @@
                 top: 6px
         &__item
             padding: 22px
-    .example__img
-        width: 450px
     .map__img
         height: 300px
     .footer 
@@ -297,6 +308,14 @@
             width: 100%
             justify-content: center
             padding: 20px 0
+    .example__slider-box
+        height: 400px
+    .example__slider-img
+        top: 0
+        left: 0
+        margin: 0 auto
+        height: 100%
+        width: 70%
     
 @media (max-width: 556px)
     .works__item
@@ -357,8 +376,6 @@
     .example__expenses
         font-size: 14px
         line-height: 20px   
-    .example__img
-        width: 350px
     .example, .example__box
         background-color: #F2F2F2
     .works 
@@ -537,6 +554,12 @@
             font-size: 16px
         &__text
             font-size: 14px
+    .example__slider-img
+        width: 100%
+    .example__slider-box 
+        height: 300px
+    .example__container 
+        height: 100%
 
 
 @media (max-width: 400px)
@@ -549,8 +572,6 @@
 @media (max-width: 375px)
     .top__img
         left: 4%
-    .example__img 
-        width: 280px
     .products__img
         max-width: 72px
         &--big
